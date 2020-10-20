@@ -82,3 +82,39 @@ register(
     class_path='robel.dkitty.walk:DKittyWalkRandomDynamics',
     max_episode_steps=_WALK_EPISODE_LEN)
 
+#===============================================================================
+# Walk tilted tasks
+#===============================================================================
+
+# Default number of steps per episode.
+_WALK_EPISODE_LEN = 160  # 160*40*2.5ms = 16s
+
+register(
+    env_id='DKittyWalkTiltedFixedUp-v0',
+    class_path='robel.dkitty.walk_tilted:DKittyWalkTiltedFixedUp',
+    max_episode_steps=_WALK_EPISODE_LEN)
+
+register(
+    env_id='DKittyWalkTiltedRandomUp-v0',
+    class_path='robel.dkitty.walk_tilted:DKittyWalkTiltedRandomUp',
+    max_episode_steps=_WALK_EPISODE_LEN)
+
+register(
+    env_id='DKittyWalkTiltedRandomDynamicsUp-v0',
+    class_path='robel.dkitty.walk_tilted:DKittyWalkTiltedRandomDynamicsUp',
+    max_episode_steps=_WALK_EPISODE_LEN)
+
+register(
+    env_id='DKittyWalkTiltedFixedDown-v0',
+    class_path='robel.dkitty.walk_tilted:DKittyWalkTiltedFixedDown',
+    max_episode_steps=_WALK_EPISODE_LEN)
+
+register(
+    env_id='DKittyWalkTiltedRandomDown-v0',
+    class_path='robel.dkitty.walk_tilted:DKittyWalkTiltedRandomDown',
+    max_episode_steps=_WALK_EPISODE_LEN)
+
+register(
+    env_id='DKittyWalkTiltedRandomDynamicsDown-v0',
+    class_path='robel.dkitty.walk_tilted:DKittyWalkTiltedRandomDynamicsDown',
+    max_episode_steps=_WALK_EPISODE_LEN)
