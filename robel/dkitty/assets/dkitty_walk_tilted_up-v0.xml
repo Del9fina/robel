@@ -17,7 +17,7 @@
 <?xml version="1.0"?>
 <mujoco model="dkitty-v2.1">
   <compiler meshdir="./../../robel-scenes/dkitty" texturedir="../../robel-scenes/dkitty"/>
-  <include file="./../../robel-scenes/scenes/basic_scene_tilted.xml"/>
+  <include file="./../../robel-scenes/scenes/basic_scene_tilted_up.xml"/>
   <include file="./../../robel-scenes/dkitty/assets/dependenciesA_xh-v2.1.xml"/>
   <asset>
     <hfield name="hf1" size="4.5 4.5 1 .1" nrow="120" ncol="120"/>

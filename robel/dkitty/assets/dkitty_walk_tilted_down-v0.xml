@@ -17,16 +17,16 @@
 <?xml version="1.0"?>
 <mujoco model="dkitty-v2.1">
   <compiler meshdir="./../../robel-scenes/dkitty" texturedir="../../robel-scenes/dkitty"/>
-  <include file="./../../robel-scenes/scenes/basic_scene_tilted.xml"/>
+  <include file="./../../robel-scenes/scenes/basic_scene_tilted_down.xml"/>
   <include file="./../../robel-scenes/dkitty/assets/dependenciesA_xh-v2.1.xml"/>
   <asset>
     <hfield name="hf1" size="4.5 4.5 1 .1" nrow="120" ncol="120"/>
   </asset>
   <worldbody>
-    <site name="target" pos="0 .9962 .0869" euler=".087 0 0" type="cylinder" size=".5 .005 0" rgba="0 1 0 1"/>
-    <site name="heading" pos="0 .9745 .3359" euler=".087 0 0" type="cylinder" size=".05 .25 0" rgba="1 1 0 1"/>
-    <geom name="hfield1" type="hfield" hfield="hf1" pos="0 0 -.005" euler=".087 0 0" material="MatPlane" rgba=".7 .7 .7 1"/>
-    <body name="kitty_frame" pos="0 0 .3" euler=".087 0 3.14">
+    <site name="target" pos="0 .9962 .0869" euler="-.087 0 0" type="cylinder" size=".5 .005 0" rgba="0 1 0 1"/>
+    <site name="heading" pos="0 .9745 .3359" euler="-.087 0 0" type="cylinder" size=".05 .25 0" rgba="1 1 0 1"/>
+    <geom name="hfield1" type="hfield" hfield="hf1" pos="0 0 -.005" euler="-.087 0 0" material="MatPlane" rgba=".7 .7 .7 1"/>
+    <body name="kitty_frame" pos="0 0 .3" euler="-.087 0 0">
       <camera name="trackingZ" pos="0 0 3" zaxis="0 0 3" mode="trackcom"/>
       <camera name="trackingY" pos="1.5 1.5 .35" xyaxes="-.7 1 0 0 -.3 1" mode="trackcom"/>
       <site name="torso" type="box" size=".090 .150 .007" group="4"/>

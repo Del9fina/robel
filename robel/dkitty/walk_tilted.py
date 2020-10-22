@@ -63,9 +63,9 @@ class DKittyWalkTiltedFixedDown(BaseDKittyWalk):
     def _reset(self):
         """Resets the environment."""
         target_dist = 2.0
-        target_theta = 3 * np.pi / 2  # Point towards (-y)-axis
+        target_theta = np.pi / 2  # Point towards y-axis
         self._initial_target_pos = target_dist * np.array([
-            np.cos(target_theta), np.sin(target_theta) * np.cos(TILT), np.sin(TILT)
+            np.cos(target_theta), np.sin(target_theta) * np.cos(-TILT), np.sin(-TILT)
         ])
         super()._reset()
 
@@ -133,11 +133,11 @@ class DKittyWalkTiltedRandomDown(BaseDKittyWalk):
     def _reset(self):
         """Resets the environment."""
         target_dist = self.np_random.uniform(*self._target_distance_range)
-        # Offset the angle by 270deg since D'Kitty looks towards -y-axis.
-        target_theta = 3 * np.pi / 2 + self.np_random.uniform(
+        # Offset the angle by 90deg since D'Kitty looks towards +y-axis.
+        target_theta = np.pi / 2 + self.np_random.uniform(
             *self._target_angle_range)
         self._initial_target_pos = target_dist * np.array([
-            np.cos(target_theta), np.sin(target_theta) * np.cos(TILT), np.sin(target_theta) * np.sin(TILT)
+            np.cos(target_theta), np.sin(target_theta) * np.cos(-TILT), np.sin(target_theta) * np.sin(-TILT)
         ])
         super()._reset()
 
