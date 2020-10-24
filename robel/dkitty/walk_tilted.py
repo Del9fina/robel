@@ -33,7 +33,7 @@ from robel.utils.resources import get_asset_path
 DKITTY_ASSET_PATH_UP = 'robel/dkitty/assets/dkitty_walk_tilted_up-v0.xml'
 DKITTY_ASSET_PATH_DOWN = 'robel/dkitty/assets/dkitty_walk_tilted_down-v0.xml'
 
-TILT = 0.087
+TILT = 0.5236
 
 
 @configurable(pickleable=True)
